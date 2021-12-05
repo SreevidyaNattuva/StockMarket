@@ -1,0 +1,1 @@
+This app takes 3 imputs, one is stock price when stock is bought, second is quantity of stocks and third is current price of stock.HTML, CSS, JS are used to design this app.
