@@ -14,14 +14,14 @@ function calculateTotalPrice(){
    if(initialStockPrice && quantityofStocks && currentStockPrice){
         if(initialStockPrice<currentStockPrice){
             var profit = Math.trunc((currentStockPrice-initialStockPrice)*quantityofStocks);
-            profitPercentage = (profit/initialStockPrice)*100;
+            profitPercentage = ((profit/initialStockPrice)*100).toFixed(2);
             console.log(profitPercentage);
-            outputShown.innerText = "Yay!!!Profit it is "+ profitPercentage +"%";
+            outputShown.innerText = "Yay!!!Profit it is, profit is "+profit+" profit percentage is "+ profitPercentage +"%";
         }
         else if(initialStockPrice>currentStockPrice){
             var loss = Math.trunc((initialStockPrice-currentStockPrice)*quantityofStocks);
-            lossPercentage = (loss/initialStockPrice)*100;
-            outputShown.innerText = "Oops!!!loss it is "+ lossPercentage+"%";
+            lossPercentage = ((loss/initialStockPrice)*100).toFixed(2);
+            outputShown.innerText = "Oops!!!loss it is, loss is "+loss+" loss percentage is"+ lossPercentage+"%";
         }
         else{
             outputShown.innerText = "No loss No gain";
